@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="" />
+    <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="first concept [use-case, db, todo list]">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_145334_create_job_categories_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_145850_create_job_tags_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_148555_create_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_150019_create_companies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_150055_create_users_companies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_150139_create_jobs_job_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,6 +175,14 @@
       <workItem from="1603724126683" duration="4123000" />
       <workItem from="1603784594205" duration="717000" />
     </task>
+    <task id="LOCAL-00001" summary="first concept [use-case, db, todo list]">
+      <created>1603890983961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603890983961</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,12 +198,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first concept [use-case, db, todo list]" />
+    <option name="LAST_COMMIT_MESSAGE" value="first concept [use-case, db, todo list]" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603783795897">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="96" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1603783795897" />
+    <state x="2009" y="89" width="1502" height="872" key="DiffContextDialog" timestamp="1603891049186">
+      <screen x="1920" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2009" y="89" width="1502" height="872" key="DiffContextDialog/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603891049186" />
     <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1603784956182">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -214,9 +245,17 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="477" y="283" key="NewPhpFileDialog/0.0.1280.720@0.0.1280.720" timestamp="1603784888069" />
-    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603783636633">
+    <state x="2349" y="248" key="Vcs.Push.Dialog.v2" timestamp="1603890992664">
+      <screen x="1920" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603890992664" />
+    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603869762485">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.720@0.0.1280.720" timestamp="1603783636633" />
+    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.720@0.0.1280.720" timestamp="1603869762485" />
+    <state x="2413" y="233" key="run.anything.popup" timestamp="1603898637286">
+      <screen x="1920" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2413" y="233" key="run.anything.popup/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603898637286" />
   </component>
 </project>
