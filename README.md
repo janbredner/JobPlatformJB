@@ -45,11 +45,26 @@
     <li>Migrations schreiben
         <ul>
             <li>Grundlagen sind gesetzt</li>
+            <li>erste Struktur ist entwickelt<br>
+            muss später eventuell erweitert werden,
+            reicht aber erstmal um darauf aufzubauen
+            und um den Rest zu entwickeln/verstehen.</li>
         </ul>
     </li>
-    <li>Daten zum Testen bereitstellen (seeder)</li>
-    <li>Controller</li>
+    <li>Daten zum Testen bereitstellen (seeder)
+        <ul>
+            <li>Testdaten stehen bereit.</li>
+            <li>Eventuell werden noch weitere Daten benötigt.</li>
+        </ul>
+    </li>    
+    <li>Models erstellen</li>
+    <li>Controller erstellen</li>
     <li>Policy</li>
+    <li>Passwörter verschlüsseln (das geht bestimmt ganz einfach)
+        <ul>
+            <li>Hash::make() erfüllt den Job</li>
+        </ul>
+    </li>
     <li>API</li>
     <li>Eventuell Oberfläche</li>
 </ul>
@@ -60,7 +75,10 @@
 <!-- ---------------------------------------------------------- -->
 <h2>Fragen</h2>
 <ul>
-    <li>Wie mit .env umgehen (in Bezug auf github)?</li>
-    <li>create database in migrations möglich?</li>
+    <li>Wie mit .env umgehen (in Bezug auf github)?
+        <br>Muss jeder für sich definieren und für sich selbst anpassen,
+        deswegen ignorieren.</li>
+    <li>create database in migrations möglich?<br>
+        macht keinen Sinn, weil jeder für sich die db definieren muss(Gefahr der Überschreibung)</li>
 </ul>
 

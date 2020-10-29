@@ -14,9 +14,10 @@ class CreateJobsJobTagsTable extends Migration
     public function up()
     {
         Schema::create('jobs_job_tags', function (Blueprint $table) {
-            $table->id();
-            //$table->foreignId('job_id')->constrained();
-           //$table->foreignId('tag_id')->constrained();
+            //$table->id();
+            $table->foreignId('job_id')->constrained();
+            $table->foreignId('job_tag_id')->constrained();
+            $table->index(['job_id', 'job_tag_id']);
             $table->timestamps();
         });
     }

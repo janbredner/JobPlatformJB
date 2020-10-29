@@ -18,7 +18,7 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->string('address'); // split later if needed, just keeping it simple atm
             $table->text('description');
-            //$table->foreignID('user_id')->constrained(); //creator of the company
+            $table->foreignID('user_id')->constrained(); //creator of the company
             $table->timestamps();
         });
     }
