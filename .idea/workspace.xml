@@ -5,22 +5,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="first concept [use-case, db, todo list]">
-      <change afterPath="$PROJECT_DIR$/database/seeders/CompanySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/JobCategorySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/JobJobTagSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/JobSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/JobTagSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/UserCompanySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+    <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="completed migrations, may need to add some small things later&#10;completed seeders&#10;updated the README.md">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/JobCategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/JobTagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/JobCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/JobTag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_145850_create_job_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_145850_create_job_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_148555_create_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_148555_create_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_150019_create_companies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_140000_create_companies_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_150055_create_users_companies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_150055_create_users_companies_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_150139_create_jobs_job_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_150139_create_jobs_job_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603890983961</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="completed migrations, may need to add some small things later&#10;completed seeders&#10;updated the README.md">
+      <created>1603964484688</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603964484688</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +207,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first concept [use-case, db, todo list]" />
-    <option name="LAST_COMMIT_MESSAGE" value="first concept [use-case, db, todo list]" />
+    <MESSAGE value="completed migrations, may need to add some small things later&#10;completed seeders&#10;updated the README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed migrations, may need to add some small things later&#10;completed seeders&#10;updated the README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603783795897">
@@ -255,17 +255,21 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="477" y="283" key="NewPhpFileDialog/0.0.1280.720@0.0.1280.720" timestamp="1603784888069" />
-    <state x="2349" y="248" key="Vcs.Push.Dialog.v2" timestamp="1603890992664">
+    <state x="2349" y="248" key="Vcs.Push.Dialog.v2" timestamp="1603964509441">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
-    <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603890992664" />
+    <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603964509441" />
     <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603869762485">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.720@0.0.1280.720" timestamp="1603869762485" />
-    <state x="2413" y="233" key="run.anything.popup" timestamp="1603898637286">
+    <state x="2574" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603981024828">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
-    <state x="2413" y="233" key="run.anything.popup/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603898637286" />
+    <state x="2574" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603981024828" />
+    <state x="2413" y="233" key="run.anything.popup" timestamp="1603983317607">
+      <screen x="1920" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2413" y="233" key="run.anything.popup/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603983317607" />
   </component>
 </project>

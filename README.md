@@ -57,15 +57,22 @@
             <li>Eventuell werden noch weitere Daten benötigt.</li>
         </ul>
     </li>    
-    <li>Models erstellen</li>
-    <li>Controller erstellen</li>
+    <li>Models und Controller erstellen
+        <ul>
+            <li>Erste Models und Controller erstellt (zum Einarbeiten)</li>
+        </ul>
+    </li>
+    <li>API
+        <ul>
+            <li>Zwei Route::get sind erstellt</li>
+        </ul>
+    </li>
     <li>Policy</li>
     <li>Passwörter verschlüsseln (das geht bestimmt ganz einfach)
         <ul>
             <li>Hash::make() erfüllt den Job</li>
         </ul>
     </li>
-    <li>API</li>
     <li>Eventuell Oberfläche</li>
 </ul>
 <!-- ---------------------------------------------------------- -->
