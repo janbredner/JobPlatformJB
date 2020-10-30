@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class JobCategory extends Model
+class Job extends Model
 {
     use HasFactory;
 
@@ -17,5 +17,10 @@ class JobCategory extends Model
     protected $fillable = [
         'name',
         'description',
+        'user_id',
+        'company_id',
+        'job_category_id',
     ];
+
+
 }

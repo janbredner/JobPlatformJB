@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JobTag;
+use App\Models\User;
 use Illuminate\Http\Request;
-use \Illuminate\Http\Response;
+use Illuminate\Http\Response;
 
-class JobTagController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class JobTagController extends Controller
      */
     public function index()
     {
-        return JobTag::all();
+        return User::all();
     }
 
     /**
@@ -26,7 +26,7 @@ class JobTagController extends Controller
      */
     public function store(Request $request)
     {
-        return JobTag::create($request->all());
+        return User::create($request->all());
     }
 
     /**
@@ -37,22 +37,23 @@ class JobTagController extends Controller
      */
     public function show(int $id)
     {
-        return JobTag::find($id);
+        return User::find($id);
     }
+
 
     /**
      * Update the specified resource in storage.
      *
      * @param  Request  $request
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, $id)
     {
-        $jobTag = JobTag::findOrFail($id);
-        $jobTag->update($request->all());
+        $user = User::findOrFail($id);
+        $user->update($request->all());
 
-        return $jobTag;
+        return $user;
     }
 
     /**
@@ -63,8 +64,8 @@ class JobTagController extends Controller
      */
     public function destroy(int $id)
     {
-        $jobTag = JobTag::findOrfail($id);
-        $jobTag->delete();
+        $job = User::findOrfail($id);
+        $job->delete();
 
         return response(null, 204);
     }

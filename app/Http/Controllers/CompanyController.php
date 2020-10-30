@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JobCategory;
+use App\Models\Company;
 use Illuminate\Http\Request;
 
-class JobCategoryController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class JobCategoryController extends Controller
      */
     public function index()
     {
-        return JobCategory::all();
+        return Company::all();
     }
 
     /**
@@ -25,47 +25,40 @@ class JobCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        return JobCategory::create($request->all());
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show(int $id)
     {
-        return JobCategory::find($id);
+        return Company::find($id);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\JobCategory  $jobCategory
+     * @param  \App\Models\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, Company $company)
     {
-        $jobCategory = JobCategory::findOrFail($id);
-        $jobCategory->update($request->all());
-
-        return $jobCategory;
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(int $id)
+    public function destroy(Company $company)
     {
-
-        $jobCategory = JobCategory::findOrfail($id);
-        $jobCategory->delete();
-
-        return response(null, 204);
+        //
     }
 }

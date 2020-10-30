@@ -62,9 +62,12 @@
             <li>Erste Models und Controller erstellt (zum Einarbeiten)</li>
         </ul>
     </li>
+    <li>Unnötige timestamps entfernen</li>
     <li>API
         <ul>
             <li>Zwei Route::get sind erstellt</li>
+            <li>Http-response muss sinnvoll gestaltet werden</li>
+            <li>relationships einbauen</li>
         </ul>
     </li>
     <li>Policy</li>
@@ -79,6 +82,10 @@
 <h2>Probleme</h2>
 <!-- ---------------------------------------------------------- -->
 <h2>Ideen zur Umsetzung</h2>
+<ul>
+    <li>User kann andere User zu Unternehmen hinzufügen/einladen</li>
+    <li>PDF export (wenn noch Zeit übrig ist)</li>
+</ul>
 <!-- ---------------------------------------------------------- -->
 <h2>Fragen</h2>
 <ul>
@@ -87,5 +94,7 @@
         deswegen ignorieren.</li>
     <li>create database in migrations möglich?<br>
         macht keinen Sinn, weil jeder für sich die db definieren muss(Gefahr der Überschreibung)</li>
+    <li>show(Model $model) oder show(int $id)?</li>
+    <li>foreign key in api?</li>
 </ul>
 
