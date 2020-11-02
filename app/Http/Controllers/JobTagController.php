@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\JobTag;
+use Exception;
 use Illuminate\Http\Request;
 use \Illuminate\Http\Response;
 
@@ -15,7 +16,7 @@ class JobTagController extends Controller
      */
     public function index()
     {
-        return JobTag::all();
+        return response(JobTag::all(), 200);
     }
 
     /**
@@ -26,46 +27,50 @@ class JobTagController extends Controller
      */
     public function store(Request $request)
     {
-        return JobTag::create($request->all());
+        return response(JobTag::create($request->all()), 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  JobTag $jobTag
      * @return Response
      */
-    public function show(int $id)
+    public function show(JobTag $jobTag)
     {
-        return JobTag::find($id);
+        return response($jobTag, 200);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  Request  $request
-     * @param  int $id
+     * @param  JobTag $jobTag
      * @return Response
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, JobTag $jobTag)
     {
-        $jobTag = JobTag::findOrFail($id);
         $jobTag->update($request->all());
 
-        return $jobTag;
+        return response($jobTag, 200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param JobTag $jobTag
      * @return Response
+     * @throws Exception
      */
-    public function destroy(int $id)
+    public function destroy(JobTag $jobTag)
     {
-        $jobTag = JobTag::findOrfail($id);
-        $jobTag->delete();
-
-        return response(null, 204);
+        if($jobTag->delete())
+        {
+            return response(['success' => 'true'], 200);
+        }
+        else
+        {
+            return response(['success' => 'false'], 200);
+        }
     }
 }

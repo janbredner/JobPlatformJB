@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -15,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::all();
+        return response(User::all(),200);
     }
 
     /**
@@ -26,18 +27,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        return User::create($request->all());
+        $user = User::create($request->all());
+
+        return response($user, 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  User $user
      * @return Response
      */
-    public function show(int $id)
+    public function show(User $user)
     {
-        return User::find($id);
+        return response($user,200);
     }
 
 
@@ -45,27 +48,26 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  Request  $request
-     * @param  int  $id
+     * @param  User $user
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        $user = User::findOrFail($id);
         $user->update($request->all());
 
-        return $user;
+        return response($user, 200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param User $user
      * @return Response
+     * @throws Exception
      */
-    public function destroy(int $id)
+    public function destroy(User $user)
     {
-        $job = User::findOrfail($id);
-        $job->delete();
+        $user->delete();
 
         return response(null, 204);
     }

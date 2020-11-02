@@ -34,10 +34,10 @@ Route::delete('jobs/{id}', [JobController::class, 'destroy']);
 // JobTag routes
 
 Route::get('jobTags', [JobTagController::class, 'index']);
-Route::get('jobTags/{id}', [JobTagController::class, 'show']);
+Route::get('jobTags/{jobTag}', [JobTagController::class, 'show']);
 Route::post('jobTags', [JobTagController::class, 'store']);
-Route::put('jobTags/{id}', [JobTagController::class, 'update']);
-Route::delete('jobTags/{id}', [JobTagController::class, 'destroy']);
+Route::put('jobTags/{jobTag}', [JobTagController::class, 'update']);
+Route::delete('jobTags/{jobTag}', [JobTagController::class, 'destroy']);
 
 // JobCategory routes
 
@@ -58,9 +58,9 @@ Route::delete('companies/{id}', [CompanyController::class, 'destroy']);
 // User routes      ////////////////////////////////////////////////////////////////////////////
 
 Route::get('users',[UserController::class, 'index']);
-Route::get('users/{id}', [UserController::class, 'show']);
+Route::get('users/{user}', [UserController::class, 'show']);
 Route::post('users',[UserController::class, 'store']);
-Route::put('users/{id}', [UserController::class, 'update']);
-Route::delete('users/{id}', [UserController::class, 'destroy']);
+Route::put('users/{user}', [UserController::class, 'update']);
+Route::delete('users/{user}', [UserController::class, 'destroy']);
 
 

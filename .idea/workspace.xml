@@ -6,18 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="started with the models and controllers&#10;started with the api">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/JobController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Job.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/JobJobTagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserCompanyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/JobJobTag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/UserCompany.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JobCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JobCategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JobTagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JobTagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/JobCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/JobCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/JobTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/JobTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +174,7 @@
       <updated>1603724124905</updated>
       <workItem from="1603724126683" duration="4123000" />
       <workItem from="1603784594205" duration="717000" />
-      <workItem from="1604037444826" duration="21602000" />
+      <workItem from="1604037444826" duration="29006000" />
     </task>
     <task id="LOCAL-00001" summary="first concept [use-case, db, todo list]">
       <created>1603890983961</created>
@@ -201,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603985246793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="created more models and controllers&#10;worked on the api.php&#10;updated the README (2 Questions added)">
+      <created>1604065237507</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604065237507</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,17 +226,18 @@
     <MESSAGE value="first concept [use-case, db, todo list]" />
     <MESSAGE value="completed migrations, may need to add some small things later&#10;completed seeders&#10;updated the README.md" />
     <MESSAGE value="started with the models and controllers&#10;started with the api" />
-    <option name="LAST_COMMIT_MESSAGE" value="started with the models and controllers&#10;started with the api" />
+    <MESSAGE value="created more models and controllers&#10;worked on the api.php&#10;updated the README (2 Questions added)" />
+    <option name="LAST_COMMIT_MESSAGE" value="created more models and controllers&#10;worked on the api.php&#10;updated the README (2 Questions added)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603783795897">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="96" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1603783795897" />
-    <state x="2487" y="270" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604060783652">
+    <state x="2487" y="270" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604301425934">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
-    <state x="2487" y="270" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604060783652" />
+    <state x="2487" y="270" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604301425934" />
     <state x="2009" y="89" width="1502" height="872" key="DiffContextDialog" timestamp="1603891049186">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
@@ -270,10 +274,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="477" y="283" key="NewPhpFileDialog/0.0.1280.720@0.0.1280.720" timestamp="1603784888069" />
-    <state x="2349" y="248" key="Vcs.Push.Dialog.v2" timestamp="1603985254511">
+    <state x="2349" y="248" key="Vcs.Push.Dialog.v2" timestamp="1604065266278">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
-    <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603985254511" />
+    <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604065266278" />
     <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603869762485">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

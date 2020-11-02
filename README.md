@@ -94,7 +94,8 @@
         deswegen ignorieren.</li>
     <li>create database in migrations möglich?<br>
         macht keinen Sinn, weil jeder für sich die db definieren muss(Gefahr der Überschreibung)</li>
-    <li>show(Model $model) oder show(int $id)?</li>
+    <li>show(Model $model) oder show(int $id)?<br>
+    Achtung in api.php nicht /{id}, sondern /{user} beispielsweise.</li>
     <li>foreign key in api?</li>
 </ul>
 
