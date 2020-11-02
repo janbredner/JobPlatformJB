@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
 use App\Models\JobTag;
 use Exception;
 use Illuminate\Http\Request;
@@ -16,7 +17,18 @@ class JobTagController extends Controller
      */
     public function index()
     {
-        return response(JobTag::all(), 200);
+        return JobTagController::indexP(25);
+    }
+
+    /**
+     * Display a listing of the resource using paginate().
+     *
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function indexP(int $itemsPerPage)
+    {
+       return response(JobTag::paginate($itemsPerPage), 200);
     }
 
     /**
@@ -70,7 +82,7 @@ class JobTagController extends Controller
         }
         else
         {
-            return response(['success' => 'false'], 200);
+            return response(['success' => 'false'], 410);
         }
     }
 }

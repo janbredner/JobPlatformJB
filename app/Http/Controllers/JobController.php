@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -15,7 +16,18 @@ class JobController extends Controller
      */
     public function index()
     {
-        return response(Job::all(),200);
+        return JobController::indexP(25);
+    }
+
+    /**
+     * Display a listing of the resource using paginate().
+     *
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function indexP(int $itemsPerPage)
+    {
+        return response(Job::paginate($itemsPerPage), 200);
     }
 
     /**
@@ -26,46 +38,51 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        return Job::create($request->all());
+        return response(Job::create($request->all()), 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Job  $job
      * @return Response
      */
-    public function show(int $id)
+    public function show(Job  $job)
     {
-        return Job::find($id);
+        return response($job, 200);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  Request  $request
-     * @param  int $id
+     * @param  Job  $job
      * @return Response
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, Job  $job)
     {
-        $job = Job::findOrFail($id);
+
         $job->update($request->all());
 
-        return $job;
+        return response($job,200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param Job $job
      * @return Response
+     * @throws Exception
      */
-    public function destroy(int $id)
+    public function destroy(Job  $job)
     {
-        $job = Job::findOrfail($id);
-        $job->delete();
-
-        return response(null, 204);
+        if($job->delete())
+        {
+            return response(['success' => 'true'], 200);
+        }
+        else
+        {
+            return response(['success' => 'false'], 410);
+        }
     }
 }

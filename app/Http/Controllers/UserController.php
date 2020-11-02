@@ -16,7 +16,18 @@ class UserController extends Controller
      */
     public function index()
     {
-        return response(User::all(),200);
+        return UserController::indexP(25);
+    }
+
+    /**
+     * Display a listing of the resource using paginate().
+     *
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function indexP(int $itemsPerPage)
+    {
+        return response(User::paginate($itemsPerPage), 200);
     }
 
     /**
@@ -27,9 +38,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::create($request->all());
-
-        return response($user, 201);
+        return response(User::create($request->all(), 201));
     }
 
     /**
@@ -67,8 +76,13 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        $user->delete();
-
-        return response(null, 204);
+        if($user->delete())
+        {
+            return response(['success' => 'true'], 200);
+        }
+        else
+        {
+            return response(['success' => 'false'], 410);
+        }
     }
 }

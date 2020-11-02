@@ -96,6 +96,7 @@
         macht keinen Sinn, weil jeder für sich die db definieren muss(Gefahr der Überschreibung)</li>
     <li>show(Model $model) oder show(int $id)?<br>
     Achtung in api.php nicht /{id}, sondern /{user} beispielsweise.</li>
+    <li>abfragen/löschen/bearbeiten von nicht vorhandenen Daten bringt 404 - doch nach id fragen?</li>
     <li>foreign key in api?</li>
 </ul>
 

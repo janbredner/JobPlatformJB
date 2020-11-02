@@ -26,14 +26,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Job routes       ////////////////////////////////////////////////////////////////////////////
 
 Route::get('jobs', [JobController::class, 'index']);
-Route::get('jobs/{id}', [JobController::class, 'show']);
+Route::get('jobs/pages/{itemsPerPage}', [JobController::class, 'indexP']);
+Route::get('jobs/{job}', [JobController::class, 'show']);
 Route::post('jobs', [JobController::class, 'store']);
-Route::put('jobs/{id}', [JobController::class, 'update']);
-Route::delete('jobs/{id}', [JobController::class, 'destroy']);
+Route::put('jobs/{job}', [JobController::class, 'update']);
+Route::delete('jobs/{job}', [JobController::class, 'destroy']);
 
 // JobTag routes
 
 Route::get('jobTags', [JobTagController::class, 'index']);
+Route::get('jobTags/pages/{itemsPerPage}', [JobTagController::class, 'indexP']);
 Route::get('jobTags/{jobTag}', [JobTagController::class, 'show']);
 Route::post('jobTags', [JobTagController::class, 'store']);
 Route::put('jobTags/{jobTag}', [JobTagController::class, 'update']);
@@ -42,22 +44,25 @@ Route::delete('jobTags/{jobTag}', [JobTagController::class, 'destroy']);
 // JobCategory routes
 
 Route::get('jobCategories', [JobCategoryController::class, 'index']);
-Route::get('jobCategories/{id}', [JobCategoryController::class, 'show']);
+Route::get('jobCategories/pages/{itemsPerPage}', [JobCategoryController::class, 'indexP']);
+Route::get('jobCategories/{jobCategory}', [JobCategoryController::class, 'show']);
 Route::post('jobCategories', [JobCategoryController::class, 'store']);
-Route::put('jobCategories/{id}', [JobCategoryController::class, 'update']);
-Route::delete('jobCategories/{id}', [JobCategoryController::class, 'destroy']);
+Route::put('jobCategories/{jobCategory}', [JobCategoryController::class, 'update']);
+Route::delete('jobCategories/{jobCategory}', [JobCategoryController::class, 'destroy']);
 
 // Company routes   ////////////////////////////////////////////////////////////////////////////
 
 Route::get('companies', [CompanyController::class, 'index']);
-Route::get('companies/{id}', [CompanyController::class, 'show']);
+Route::get('companies/pages/{itemsPerPage}', [CompanyController::class, 'indexP']);
+Route::get('companies/{company}', [CompanyController::class, 'show']);
 Route::post('companies', [CompanyController::class, 'store']);
-Route::put('companies/{id}', [CompanyController::class, 'update']);
-Route::delete('companies/{id}', [CompanyController::class, 'destroy']);
+Route::put('companies/{company}', [CompanyController::class, 'update']);
+Route::delete('companies/{company}', [CompanyController::class, 'destroy']);
 
 // User routes      ////////////////////////////////////////////////////////////////////////////
 
 Route::get('users',[UserController::class, 'index']);
+Route::get('users/pages/{itemsPerPage}',[UserController::class, 'indexP']);
 Route::get('users/{user}', [UserController::class, 'show']);
 Route::post('users',[UserController::class, 'store']);
 Route::put('users/{user}', [UserController::class, 'update']);

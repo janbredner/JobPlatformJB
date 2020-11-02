@@ -3,69 +3,85 @@
 namespace App\Http\Controllers;
 
 use App\Models\JobCategory;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class JobCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
-        return JobCategory::all();
+        return JobCategoryController::indexP(25);
+    }
+
+    /**
+     * Display a listing of the resource using paginate().
+     *
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function indexP(int $itemsPerPage)
+    {
+        return response(JobCategory::paginate($itemsPerPage), 200);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
-        return JobCategory::create($request->all());
+        return response(JobCategory::create($request->all()), 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @param  JobCategory $jobCategory
+     * @return Response
      */
-    public function show(int $id)
+    public function show(JobCategory $jobCategory)
     {
-        return JobCategory::find($id);
+        return response($jobCategory, 200);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\JobCategory  $jobCategory
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param JobCategory $jobCategory
+     * @return Response
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, JobCategory $jobCategory)
     {
-        $jobCategory = JobCategory::findOrFail($id);
         $jobCategory->update($request->all());
 
-        return $jobCategory;
+        return response($jobCategory,200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param JobCategory $jobCategory
+     * @return Response
+     * @throws Exception
      */
-    public function destroy(int $id)
+    public function destroy(JobCategory $jobCategory)
     {
-
-        $jobCategory = JobCategory::findOrfail($id);
-        $jobCategory->delete();
-
-        return response(null, 204);
+        if($jobCategory->delete())
+        {
+            return response(['success' => 'true'], 200);
+        }
+        else
+        {
+            return response(['success' => 'false'], 200);
+        }
     }
 }
