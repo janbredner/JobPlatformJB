@@ -60,14 +60,17 @@
     <li>Models und Controller erstellen
         <ul>
             <li>Erste Models und Controller erstellt (zum Einarbeiten)</li>
+            <li>Baisfunktion stehen zur Verfügung</li>
+            <li>Relationships sind eingetragen</li>
+            <li>Abfragen bezüglich der Relationships sind möglich</li>
         </ul>
     </li>
     <li>Unnötige timestamps entfernen</li>
     <li>API
         <ul>
-            <li>Zwei Route::get sind erstellt</li>
+            <li>REST routes sind erstellt</li>
             <li>Http-response muss sinnvoll gestaltet werden</li>
-            <li>relationships einbauen</li>
+            <li>relationships sind eingebaut</li>
         </ul>
     </li>
     <li>Policy</li>

@@ -16,7 +16,7 @@ class JobTagController extends Controller
      * @param int $itemsPerPage
      * @return Response
      */
-    public function index(int $itemsPerPage)
+    public function index(int $itemsPerPage = 15)
     {
         return response(JobTag::paginate($itemsPerPage), 200);
     }
@@ -74,5 +74,17 @@ class JobTagController extends Controller
         {
             return response(['success' => 'false'], 410);
         }
+    }
+
+    /**
+     * Get all "Job" for a specific "JobTag"
+     *
+     * @param JobTag $jobTag
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function getJobs(JobTag $jobTag, int $itemsPerPage = 15)
+    {
+        return response($jobTag->jobs()->paginate($itemsPerPage), 200);
     }
 }

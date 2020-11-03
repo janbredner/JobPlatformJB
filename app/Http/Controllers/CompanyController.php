@@ -74,4 +74,39 @@ class CompanyController extends Controller
             return response(['success' => 'false'], 410);
         }
     }
+
+    /**
+     * Get a listing of jobs given a category.
+     *
+     * @param Company $company
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function getJobs(Company $company, int $itemsPerPage = 15)
+    {
+        return response($company->getJobs()->paginate($itemsPerPage), 200);
+    }
+
+    /**
+     * Get the "User" (the creator) for a specific "Company"
+     *
+     * @param Company $company
+     * @return Response
+     */
+    public function getCreator(Company $company)
+    {
+        return response($company->creator()->first(),200);
+    }
+
+    /**
+     * Get a listing of "User" (not the creator) related to a given "Company".
+     *
+     * @param Company $company
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function getUsers(Company $company, int $itemsPerPage = 15)
+    {
+        return response($company->getUsers()->paginate($itemsPerPage), 200);
+    }
 }

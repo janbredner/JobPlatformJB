@@ -75,4 +75,49 @@ class JobController extends Controller
             return response(['success' => 'false'], 410);
         }
     }
+
+    /**
+     * Get a "Category" given a specific "Job"
+     *
+     * @param Job $job
+     * @return Response
+     */
+    public function getCategory(Job $job)
+    {
+        return response($job->category()->first(), 200);
+    }
+
+    /**
+     * Get a "Company" given a specific "Job"
+     *
+     * @param Job $job
+     * @return Response
+     */
+    public function getCompany(Job $job)
+    {
+        return response($job->company()->first(), 200);
+    }
+
+    /**
+     * Get the "User" (the creator) for a specific "Job"
+     *
+     * @param Job $job
+     * @return Response
+     */
+    public function getUser(Job $job)
+    {
+        return response($job->user()->first(), 200);
+    }
+
+    /**
+     * Get all "JobTag" for a specific "Job"
+     *
+     * @param Job $job
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function getTags(Job $job, int $itemsPerPage = 15)
+    {
+        return response($job->jobTags()->paginate($itemsPerPage), 200);
+    }
 }

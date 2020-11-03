@@ -78,7 +78,7 @@ class JobCategoryController extends Controller
     }
 
     /**
-     * Display a listing of jobs given a category.
+     * Get a listing of jobs given a category.
      *
      * @param JobCategory $jobCategory
      * @param int $itemsPerPage
