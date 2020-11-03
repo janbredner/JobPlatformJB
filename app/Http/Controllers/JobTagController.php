@@ -13,22 +13,12 @@ class JobTagController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
-     */
-    public function index()
-    {
-        return JobTagController::indexP(25);
-    }
-
-    /**
-     * Display a listing of the resource using paginate().
-     *
      * @param int $itemsPerPage
      * @return Response
      */
-    public function indexP(int $itemsPerPage)
+    public function index(int $itemsPerPage)
     {
-       return response(JobTag::paginate($itemsPerPage), 200);
+        return response(JobTag::paginate($itemsPerPage), 200);
     }
 
     /**

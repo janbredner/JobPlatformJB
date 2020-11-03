@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
 use App\Models\JobCategory;
 use Exception;
 use Illuminate\Http\Request;
@@ -9,23 +10,14 @@ use Illuminate\Http\Response;
 
 class JobCategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        return JobCategoryController::indexP(25);
-    }
 
     /**
-     * Display a listing of the resource using paginate().
+     * Display a listing of the resource.
      *
      * @param int $itemsPerPage
      * @return Response
      */
-    public function indexP(int $itemsPerPage)
+    public function index(int $itemsPerPage = 15)
     {
         return response(JobCategory::paginate($itemsPerPage), 200);
     }
@@ -83,5 +75,17 @@ class JobCategoryController extends Controller
         {
             return response(['success' => 'false'], 200);
         }
+    }
+
+    /**
+     * Display a listing of jobs given a category.
+     *
+     * @param JobCategory $jobCategory
+     * @param int $itemsPerPage
+     * @return Response
+     */
+    public function getJobs(JobCategory $jobCategory, int $itemsPerPage = 15)
+    {
+        return response($jobCategory->getJobs()->paginate($itemsPerPage), 200);
     }
 }

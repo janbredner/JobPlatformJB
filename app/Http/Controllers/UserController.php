@@ -12,20 +12,10 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
-     */
-    public function index()
-    {
-        return UserController::indexP(25);
-    }
-
-    /**
-     * Display a listing of the resource using paginate().
-     *
      * @param int $itemsPerPage
      * @return Response
      */
-    public function indexP(int $itemsPerPage)
+    public function index(int $itemsPerPage = 15)
     {
         return response(User::paginate($itemsPerPage), 200);
     }

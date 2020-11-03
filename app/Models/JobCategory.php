@@ -18,4 +18,9 @@ class JobCategory extends Model
         'name',
         'description',
     ];
+
+    public function getJobs()
+    {
+        return $this->hasMany('App\Models\Job');
+    }
 }
