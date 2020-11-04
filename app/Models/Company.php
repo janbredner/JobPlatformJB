@@ -24,6 +24,16 @@ class Company extends Model
         'user_id',
     ];
 
+    public static function validationRules() : array
+    {
+        return [
+            'name'          => 'string|min:1|max:150',
+            'address'       => 'string|max:150|nullable',
+            'description'   => 'string|max:150|nullable',
+            'user_id'       => 'int|exists:users,id'
+        ];
+    }
+
     /**
      * Get all "Jobs" belonging to a "Company"
      *

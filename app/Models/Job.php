@@ -24,6 +24,19 @@ class Job extends Model
         'job_category_id',
     ];
 
+    public static function validationRules() : array
+    {
+        return [
+            'name'              => 'string|min:1|max:150',
+            'description'       => 'string|max:150|nullable',
+            'user_id'           => 'int|exists:users,id',
+            'company_id'        => 'int|exists:companies,id',
+            'job_category_id'   => 'int|exists:job_categories,id',
+            'job_tags'          => 'array',
+            'job_tags.*'        => 'int|distinct|exists:job_tags,id'
+        ];
+    }
+
     /**
      * Get the "JobCategory" for a specific "Job"
      *

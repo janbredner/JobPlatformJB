@@ -100,6 +100,7 @@
     <li>show(Model $model) oder show(int $id)?<br>
     Achtung in api.php nicht /{id}, sondern /{user} beispielsweise.</li>
     <li>abfragen/löschen/bearbeiten von nicht vorhandenen Daten bringt 404 - doch nach id fragen?</li>
-    <li>foreign key in api?</li>
+    <li>Filtern von Anfragen? mehr routing oder geht das anders? filterRules()?</li>
+    <li>Parameter für paginate() übergeben?</li>
 </ul>
 

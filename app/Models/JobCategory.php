@@ -20,6 +20,14 @@ class JobCategory extends Model
         'description',
     ];
 
+    public static function validationRules() : array
+    {
+        return [
+            'name'          => 'string|min:1|max:150',
+            'description'   => 'string|max:150|nullable',
+        ];
+    }
+
     /**
      * Get all "Jobs" belonging to a "JobCategory"
      *

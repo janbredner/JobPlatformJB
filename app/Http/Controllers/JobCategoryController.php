@@ -14,12 +14,11 @@ class JobCategoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function index(int $itemsPerPage = 15)
+    public function index()
     {
-        return response(JobCategory::paginate($itemsPerPage), 200);
+        return response(JobCategory::paginate());
     }
 
     /**
@@ -27,10 +26,13 @@ class JobCategoryController extends Controller
      *
      * @param Request $request
      * @return Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
-        return response(JobCategory::create($request->all()), 201);
+        $data = $this->validate($request, JobCategory::validationRules());
+
+        return response(JobCategory::create($data));
     }
 
     /**
@@ -41,7 +43,7 @@ class JobCategoryController extends Controller
      */
     public function show(JobCategory $jobCategory)
     {
-        return response($jobCategory, 200);
+        return response($jobCategory);
     }
 
     /**
@@ -50,12 +52,15 @@ class JobCategoryController extends Controller
      * @param Request $request
      * @param JobCategory $jobCategory
      * @return Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function update(Request $request, JobCategory $jobCategory)
     {
-        $jobCategory->update($request->all());
+        $data = $this->validate($request, JobCategory::validationRules());
 
-        return response($jobCategory,200);
+        $status = $jobCategory->update($data);
+
+        return response(['success' => $status]);
     }
 
     /**
@@ -67,25 +72,17 @@ class JobCategoryController extends Controller
      */
     public function destroy(JobCategory $jobCategory)
     {
-        if($jobCategory->delete())
-        {
-            return response(['success' => 'true'], 200);
-        }
-        else
-        {
-            return response(['success' => 'false'], 200);
-        }
+        return response(['success' => $jobCategory->delete()]);
     }
 
     /**
      * Get a listing of jobs given a category.
      *
      * @param JobCategory $jobCategory
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function getJobs(JobCategory $jobCategory, int $itemsPerPage = 15)
+    public function getJobs(JobCategory $jobCategory)
     {
-        return response($jobCategory->getJobs()->paginate($itemsPerPage), 200);
+        return response($jobCategory->getJobs()->paginate());
     }
 }

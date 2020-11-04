@@ -1,0 +1,14 @@
+POST to create a job:
+
+{
+	"name":"test Job",
+	"description": "sdasdasdasdasdas",
+	"user_id": "1",
+	"company_id": "1",
+	"job_category_id": "1",
+	"job_tags":
+	{
+		"1":"1",
+		"2":"4"
+	}
+}

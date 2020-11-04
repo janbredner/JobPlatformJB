@@ -3,32 +3,46 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
+use App\Models\JobJobTag;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
 
 class JobController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function index(int $itemsPerPage = 15)
+    public function index()
     {
-        return response(Job::paginate($itemsPerPage), 200);
+        return response(Job::paginate());
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return Response
+     * @throws ValidationException
      */
     public function store(Request $request)
     {
-        return response(Job::create($request->all()), 201);
+        $data = $this->validate($request, Job::validationRules());
+
+        $model = Job::create($data);
+        $id = $model->id;
+
+        //das sieht aus, als hätte es ein Praktikant geschrieben
+        foreach ($request->get('job_tags') as $jobTag){
+            JobJobTag::create([ "job_id" => $id,
+                "job_tag_id" => $jobTag,
+            ]);
+        }
+
+        return response($model);
     }
 
     /**
@@ -39,22 +53,24 @@ class JobController extends Controller
      */
     public function show(Job  $job)
     {
-        return response($job, 200);
+        return response($job);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  Job  $job
+     * @param Request $request
+     * @param Job $job
      * @return Response
+     * @throws ValidationException
      */
     public function update(Request $request, Job  $job)
     {
+        $data = $this->validate($request, Job::validationRules());
 
-        $job->update($request->all());
+        $status = $job->update($data);
 
-        return response($job,200);
+        return response(['success' => $status]);
     }
 
     /**
@@ -66,14 +82,7 @@ class JobController extends Controller
      */
     public function destroy(Job  $job)
     {
-        if($job->delete())
-        {
-            return response(['success' => 'true'], 200);
-        }
-        else
-        {
-            return response(['success' => 'false'], 410);
-        }
+        return response(['success' => $job->delete()]);
     }
 
     /**
@@ -84,7 +93,7 @@ class JobController extends Controller
      */
     public function getCategory(Job $job)
     {
-        return response($job->category()->first(), 200);
+        return response($job->category()->first());
     }
 
     /**
@@ -95,7 +104,7 @@ class JobController extends Controller
      */
     public function getCompany(Job $job)
     {
-        return response($job->company()->first(), 200);
+        return response($job->company()->first());
     }
 
     /**
@@ -106,18 +115,17 @@ class JobController extends Controller
      */
     public function getUser(Job $job)
     {
-        return response($job->user()->first(), 200);
+        return response($job->user()->first());
     }
 
     /**
      * Get all "JobTag" for a specific "Job"
      *
      * @param Job $job
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function getTags(Job $job, int $itemsPerPage = 15)
+    public function getTags(Job $job)
     {
-        return response($job->jobTags()->paginate($itemsPerPage), 200);
+        return response($job->jobTags()->paginate());
     }
 }

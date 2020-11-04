@@ -6,29 +6,32 @@ use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function index(int $itemsPerPage = 15)
+    public function index()
     {
-        return response(User::paginate($itemsPerPage), 200);
+        return response(User::paginate());
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return Response
+     * @throws ValidationException
      */
     public function store(Request $request)
     {
-        return response(User::create($request->all(), 201));
+        $data = $this->validate($request, User::validationRules());
+
+        return response(User::create($data));
     }
 
     /**
@@ -39,22 +42,25 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return response($user,200);
+        return response($user);
     }
 
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  User $user
+     * @param Request $request
+     * @param User $user
      * @return Response
+     * @throws ValidationException
      */
     public function update(Request $request, User $user)
     {
-        $user->update($request->all());
+        $data = $this->validate($request, User::validationRules());
 
-        return response($user, 200);
+        $status = $user->update($data);
+
+        return response(['success' => $status]);
     }
 
     /**
@@ -66,49 +72,39 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        if($user->delete())
-        {
-            return response(['success' => 'true'], 200);
-        }
-        else
-        {
-            return response(['success' => 'false'], 410);
-        }
+        return response(['success' => $user->delete()]);
     }
 
     /**
      * Get a listing of "Job" created by a given "User".
      *
      * @param User $user
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function getJobs(User $user, int $itemsPerPage = 15)
+    public function getJobs(User $user)
     {
-        return response($user->getJobs()->paginate($itemsPerPage), 200);
+        return response($user->getJobs()->paginate());
     }
 
     /**
      * Get a listing of "Company" created by a given "User".
      *
      * @param User $user
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function getCreatedCompanies(User $user, int $itemsPerPage = 15)
+    public function getCreatedCompanies(User $user)
     {
-        return response($user->getCreatedCompanies()->paginate($itemsPerPage), 200);
+        return response($user->getCreatedCompanies()->paginate());
     }
 
     /**
      * Get a listing of "Company" related to a given "User" (not the creator).
      *
      * @param User $user
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function getCompanies(User $user, int $itemsPerPage = 15)
+    public function getCompanies(User $user)
     {
-        return response($user->getCompanies()->paginate($itemsPerPage), 200);
+        return response($user->getCompanies()->paginate());
     }
 }

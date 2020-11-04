@@ -25,6 +25,16 @@ class User extends Authenticatable
         'address',
     ];
 
+    public static function validationRules() : array
+    {
+        return [
+            'name'          => 'string|min:1|max:150',
+            'email'         => 'string|max:150|email',
+            'password'      => 'string|max:150',
+            'address'       => 'string|max:150'
+        ];
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

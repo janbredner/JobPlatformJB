@@ -6,18 +6,29 @@ use App\Models\Company;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
 
 class CompanyController extends Controller
 {
+
+
+    //constructor einfügen
+    /**
+     * CompanyController constructor.
+     */
+   /* public function __construct()
+    {
+        $this->authorizeResource(Company::class);
+    }*/
+
     /**
      * Display a listing of the resource.
      *
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function index(int $itemsPerPage = 15)
+    public function index()
     {
-        return response(Company::paginate($itemsPerPage), 200);
+        return response(Company::paginate());
     }
 
     /**
@@ -25,10 +36,13 @@ class CompanyController extends Controller
      *
      * @param Request $request
      * @return Response
+     * @throws ValidationException
      */
     public function store(Request $request)
     {
-        return response(Company::create($request->all()), 201);
+        $data = $this->validate($request, Company::validationRules());
+
+        return response(Company::create($data));
     }
 
     /**
@@ -39,7 +53,7 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        return response($company, 200);
+        return response($company);
     }
 
     /**
@@ -48,12 +62,15 @@ class CompanyController extends Controller
      * @param Request $request
      * @param Company $company
      * @return Response
+     * @throws ValidationException
      */
     public function update(Request $request, Company $company)
     {
-        $company->update($request->all());
+        $data = $this->validate($request, Company::validationRules());
 
-        return response($company, 200);
+        $status = $company->update($data);
+
+        return response(['success' => $status]);
     }
 
     /**
@@ -65,26 +82,18 @@ class CompanyController extends Controller
      */
     public function destroy(Company $company)
     {
-        if($company->delete())
-        {
-            return response(['success' => 'true'], 200);
-        }
-        else
-        {
-            return response(['success' => 'false'], 410);
-        }
+        return response(['success' => $company->delete()]);
     }
 
     /**
      * Get a listing of jobs given a category.
      *
      * @param Company $company
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function getJobs(Company $company, int $itemsPerPage = 15)
+    public function getJobs(Company $company)
     {
-        return response($company->getJobs()->paginate($itemsPerPage), 200);
+        return response($company->getJobs()->paginate());
     }
 
     /**
@@ -95,18 +104,17 @@ class CompanyController extends Controller
      */
     public function getCreator(Company $company)
     {
-        return response($company->creator()->first(),200);
+        return response($company->creator()->first());
     }
 
     /**
      * Get a listing of "User" (not the creator) related to a given "Company".
      *
      * @param Company $company
-     * @param int $itemsPerPage
      * @return Response
      */
-    public function getUsers(Company $company, int $itemsPerPage = 15)
+    public function getUsers(Company $company)
     {
-        return response($company->getUsers()->paginate($itemsPerPage), 200);
+        return response($company->getUsers()->paginate());
     }
 }
