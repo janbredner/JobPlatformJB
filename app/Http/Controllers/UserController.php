@@ -6,10 +6,28 @@ use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
 {
+
+    function logIn(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+        if(!$user || !Hash::check($request->password, $user->password)){
+            return response(['message' => 'Falsche Zugangsdaten']);
+        }
+
+        $token = $user->createToken('jobPlatformToken')->plainTextToken;
+
+        $response = [   'user' => $user,
+                        'token' => $token,
+            ];
+
+        return response($response);
+    }
+
     /**
      * Display a listing of the resource.
      *

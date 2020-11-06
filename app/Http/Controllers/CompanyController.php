@@ -10,16 +10,13 @@ use Illuminate\Validation\ValidationException;
 
 class CompanyController extends Controller
 {
-
-
-    //constructor einfügen
     /**
      * CompanyController constructor.
      */
-   /* public function __construct()
+    public function __construct()
     {
         $this->authorizeResource(Company::class);
-    }*/
+    }
 
     /**
      * Display a listing of the resource.

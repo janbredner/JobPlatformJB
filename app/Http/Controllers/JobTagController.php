@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Job;
 use App\Models\JobTag;
 use Exception;
 use Illuminate\Http\Request;
@@ -11,6 +10,11 @@ use Illuminate\Validation\ValidationException;
 
 class JobTagController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(JobTag::class);
+    }
+
     /**
      * Display a listing of the resource.
      *

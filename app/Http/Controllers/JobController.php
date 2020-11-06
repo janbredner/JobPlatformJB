@@ -11,6 +11,12 @@ use Illuminate\Validation\ValidationException;
 
 class JobController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authorizeResource(Job::class);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -53,6 +59,8 @@ class JobController extends Controller
      */
     public function show(Job  $job)
     {
+        //$this->authorize('view', $job);
+
         return response($job);
     }
 

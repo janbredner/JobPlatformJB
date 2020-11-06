@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Job;
 use App\Models\JobCategory;
+use App\Policies\JobCategoryPolicy;
 use Exception;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class JobCategoryController extends Controller
 {
+    public function __construct()
+    {
+       // $this->authorizeResource(JobCategory::class);
+    }
 
     /**
      * Display a listing of the resource.
@@ -26,7 +34,7 @@ class JobCategoryController extends Controller
      *
      * @param Request $request
      * @return Response
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws ValidationException
      */
     public function store(Request $request)
     {
@@ -38,7 +46,7 @@ class JobCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  JobCategory $jobCategory
+     * @param JobCategory $jobCategory
      * @return Response
      */
     public function show(JobCategory $jobCategory)
@@ -52,7 +60,7 @@ class JobCategoryController extends Controller
      * @param Request $request
      * @param JobCategory $jobCategory
      * @return Response
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws ValidationException
      */
     public function update(Request $request, JobCategory $jobCategory)
     {
