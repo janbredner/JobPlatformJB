@@ -6,6 +6,7 @@ use App\Models\Company;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class CompanyController extends Controller
@@ -38,6 +39,8 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         $data = $this->validate($request, Company::validationRules());
+
+        $data = $data + ['user_id' => Auth::id()];
 
         return response(Company::create($data));
     }

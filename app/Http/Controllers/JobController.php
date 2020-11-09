@@ -7,6 +7,7 @@ use App\Models\JobJobTag;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class JobController extends Controller
@@ -37,6 +38,8 @@ class JobController extends Controller
     public function store(Request $request)
     {
         $data = $this->validate($request, Job::validationRules());
+
+        $data = $data + ['user_id' => Auth::id()];
 
         $model = Job::create($data);
         $id = $model->id;

@@ -12,7 +12,7 @@ class JobTagController extends Controller
 {
     public function __construct()
     {
-        $this->authorizeResource(JobTag::class);
+        //$this->authorizeResource(JobTag::class);
     }
 
     /**
@@ -42,7 +42,7 @@ class JobTagController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  JobTag $jobTag
+     * @param JobTag $jobTag
      * @return Response
      */
     public function show(JobTag $jobTag)

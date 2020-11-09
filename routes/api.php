@@ -40,34 +40,34 @@ Route::group(['middleware' => 'auth:sanctum'] , function(){
     // JobTag routes
     // basic routes
     Route::get('jobTags', [JobTagController::class, 'index']);
-    Route::get('jobTags/{jobTag}', [JobTagController::class, 'show']);
-    Route::post('jobTags', [JobTagController::class, 'store']);
-    Route::put('jobTags/{jobTag}', [JobTagController::class, 'update']);
-    Route::delete('jobTags/{jobTag}', [JobTagController::class, 'destroy']);
+    Route::get('jobTags/{jobTag}', [JobTagController::class, 'show'])->middleware('can:view,jobTag');
+    Route::post('jobTags', [JobTagController::class, 'store'])->middleware('can:create,App\Models\JobTag');
+    Route::put('jobTags/{jobTag}', [JobTagController::class, 'update'])->middleware('can:update,jobTag');
+    Route::delete('jobTags/{jobTag}', [JobTagController::class, 'destroy'])->middleware('can:delete,jobTag');
     // relationship routes
     Route::get('jobTags/jobs/{jobTag}', [JobTagController::class , 'getJobs']);
 
-// JobCategory routes
-// basic routes
-Route::get('jobCategories', [JobCategoryController::class, 'index']);
-Route::get('jobCategories/{jobCategory}', [JobCategoryController::class, 'show']);
-Route::post('jobCategories', [JobCategoryController::class, 'store']);
-Route::put('jobCategories/{jobCategory}', [JobCategoryController::class, 'update']);
-Route::delete('jobCategories/{jobCategory}', [JobCategoryController::class, 'destroy']);
-// relationship routes
-Route::get('jobCategories/getJobs/{jobCategory}', [JobCategoryController::class, 'getJobs']);
+    // JobCategory routes
+    // basic routes
+    Route::get('jobCategories', [JobCategoryController::class, 'index']);
+    Route::get('jobCategories/{jobCategory}', [JobCategoryController::class, 'show'])->middleware('can:view,jobCategory');
+    Route::post('jobCategories', [JobCategoryController::class, 'store'])->middleware('can:create,App\Models\JobCategory');;
+    Route::put('jobCategories/{jobCategory}', [JobCategoryController::class, 'update'])->middleware('can:update,jobCategory');;
+    Route::delete('jobCategories/{jobCategory}', [JobCategoryController::class, 'destroy'])->middleware('can:delete,jobCategory');;
+    // relationship routes
+    Route::get('jobCategories/getJobs/{jobCategory}', [JobCategoryController::class, 'getJobs']);
 
-// Company routes   ////////////////////////////////////////////////////////////////////////////
-// basic routes
-Route::get('companies', [CompanyController::class, 'index']);
-Route::get('companies/{company}', [CompanyController::class, 'show']);
-Route::post('companies', [CompanyController::class, 'store']);
-Route::put('companies/{company}', [CompanyController::class, 'update']);
-Route::delete('companies/{company}', [CompanyController::class, 'destroy']);
-// relationship routes
-Route::get('companies/getJobs/{company}', [CompanyController::class, 'getJobs']);
-Route::get('companies/getCreator/{company}', [CompanyController::class, 'getCreator']);
-Route::get('companies/getUsers/{company}', [CompanyController::class, 'getUsers']);
+    // Company routes   ////////////////////////////////////////////////////////////////////////////
+    // basic routes
+    Route::get('companies', [CompanyController::class, 'index']);
+    Route::get('companies/{company}', [CompanyController::class, 'show']);
+    Route::post('companies', [CompanyController::class, 'store']);
+    Route::put('companies/{company}', [CompanyController::class, 'update']);
+    Route::delete('companies/{company}', [CompanyController::class, 'destroy']);
+    // relationship routes
+    Route::get('companies/getJobs/{company}', [CompanyController::class, 'getJobs']);
+    Route::get('companies/getCreator/{company}', [CompanyController::class, 'getCreator']);
+    Route::get('companies/getUsers/{company}', [CompanyController::class, 'getUsers']);
 
 });
 // User routes      ////////////////////////////////////////////////////////////////////////////

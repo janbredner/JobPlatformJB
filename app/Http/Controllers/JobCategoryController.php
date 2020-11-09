@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Job;
 use App\Models\JobCategory;
-use App\Policies\JobCategoryPolicy;
 use Exception;
-use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class JobCategoryController extends Controller
 {
     public function __construct()
     {
-       // $this->authorizeResource(JobCategory::class);
+        //$this->authorizeResource(JobCategory::class);
     }
 
     /**

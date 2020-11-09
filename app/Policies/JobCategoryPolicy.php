@@ -41,7 +41,11 @@ class JobCategoryPolicy
      */
     public function create(User $user)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -53,7 +57,11 @@ class JobCategoryPolicy
      */
     public function update(User $user, JobCategory $jobCategory)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -65,7 +73,11 @@ class JobCategoryPolicy
      */
     public function delete(User $user, JobCategory $jobCategory)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -77,7 +89,11 @@ class JobCategoryPolicy
      */
     public function restore(User $user, JobCategory $jobCategory)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -89,6 +105,10 @@ class JobCategoryPolicy
      */
     public function forceDelete(User $user, JobCategory $jobCategory)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 }

@@ -42,7 +42,7 @@ class JobPolicy
     public function create(User $user)
     {
         //check user_id-company_id
-        return false;
+        return true;
     }
 
     /**

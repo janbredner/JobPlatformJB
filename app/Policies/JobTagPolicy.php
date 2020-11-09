@@ -41,7 +41,11 @@ class JobTagPolicy
      */
     public function create(User $user)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -53,7 +57,11 @@ class JobTagPolicy
      */
     public function update(User $user, JobTag $jobTag)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -65,7 +73,11 @@ class JobTagPolicy
      */
     public function delete(User $user, JobTag $jobTag)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -77,7 +89,11 @@ class JobTagPolicy
      */
     public function restore(User $user, JobTag $jobTag)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -89,6 +105,10 @@ class JobTagPolicy
      */
     public function forceDelete(User $user, JobTag $jobTag)
     {
-        return true;
+        if($user->email === "jan@web.de")
+        {
+            return true;
+        }
+        return false;
     }
 }
