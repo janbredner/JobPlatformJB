@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use App\Models\Job;
 use App\Models\JobJobTag;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
 class JobController extends Controller
@@ -21,11 +23,48 @@ class JobController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return response(Job::paginate());
+        return $this->filter($request);
+        //return response(Job::paginate());
+    }
+
+    /*
+     * Filter a listing of the resource.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    private function filter(Request $request)
+    {
+        /*
+         * Das geht bestimmt auch schöner?
+         * Auslagern in extra Klasse - aber wohin - extra App\Filter anlegen?
+         */
+        $jobs = Job::query();
+
+        $filter = $request->validate([
+           'user_id'        => 'int|exists:users,id',
+           'company_id'     => 'int|exists:companies,id',
+           'category_id'    => 'int|exists:job_categories,id',
+        ]);
+
+        if (array_key_exists('user_id', $filter)) {
+            $jobs->where('user_id', '=', $filter['user_id']);
+        }
+
+        if (array_key_exists('company_id', $filter)) {
+            $jobs->where('company_id', '=', $filter['company_id']);
+        }
+
+        if (array_key_exists('category_id', $filter)) {
+            $jobs->where('job_category_id', '=', $filter['category_id']);
+        }
+
+        return response($jobs->paginate());
     }
 
     /**
@@ -39,19 +78,25 @@ class JobController extends Controller
     {
         $data = $this->validate($request, Job::validationRules());
 
-        $data = $data + ['user_id' => Auth::id()];
+        //boot creating event
+        //$data = $data + ['user_id' => Auth::id()];
+        //ist ausgelagert und funktioniert
 
-        $model = Job::create($data);
-        $id = $model->id;
+        $job = Job::create($data);
 
-        //das sieht aus, als hätte es ein Praktikant geschrieben
-        foreach ($request->get('job_tags') as $jobTag){
-            JobJobTag::create([ "job_id" => $id,
-                "job_tag_id" => $jobTag,
-            ]);
+        if(array_key_exists('job_tags', $data))
+        {
+            $tags = array();
+
+            foreach ($data['job_tags'] as $jobTag){
+                array_push($tags, $jobTag);
+            }
+
+            //sync eingebaut
+            $job->jobTags()->sync($tags);
         }
 
-        return response($model);
+        return response($job);
     }
 
     /**
@@ -62,8 +107,6 @@ class JobController extends Controller
      */
     public function show(Job  $job)
     {
-        //$this->authorize('view', $job);
-
         return response($job);
     }
 

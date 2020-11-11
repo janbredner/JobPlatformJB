@@ -40,6 +40,7 @@ class CompanyController extends Controller
     {
         $data = $this->validate($request, Company::validationRules());
 
+        //eventuell in boot aufnehmen
         $data = $data + ['user_id' => Auth::id()];
 
         return response(Company::create($data));
@@ -91,6 +92,7 @@ class CompanyController extends Controller
      * @param Company $company
      * @return Response
      */
+    //so wie beim validieren
     public function getJobs(Company $company)
     {
         return response($company->getJobs()->paginate());

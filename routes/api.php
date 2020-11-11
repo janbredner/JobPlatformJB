@@ -26,6 +26,8 @@ use \App\Http\Controllers\UserController;
 // Job routes       ////////////////////////////////////////////////////////////////////////////
 // basic routes
 Route::group(['middleware' => 'auth:sanctum'] , function(){
+    //Route::recource
+    //route::route::ressorces
     Route::get('jobs', [JobController::class, 'index']);
     Route::put('jobs/{job}', [JobController::class, 'update']);
     Route::get('jobs/{job}', [JobController::class, 'show']);
@@ -35,6 +37,7 @@ Route::group(['middleware' => 'auth:sanctum'] , function(){
     Route::get('jobs/category/{job}', [JobController::class, 'getCategory']);
     Route::get('jobs/company/{job}', [JobController::class, 'getCompany']);
     Route::get('jobs/user/{job}', [JobController::class, 'getUser']);
+    // routing ändern job-tags - nach schauen in der Doku
     Route::get('jobs/jobTags/{job}', [JobController::class , 'getTags']);
 
     // JobTag routes

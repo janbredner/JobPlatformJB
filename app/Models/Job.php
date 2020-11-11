@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Facades\Auth;
 
 class Job extends Model
 {
@@ -23,6 +24,19 @@ class Job extends Model
         'company_id',
         'job_category_id',
     ];
+
+    /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    public static function boot() {
+        parent::boot();
+
+        static::creating(function ($job) {
+            $job->user_id = Auth::id();
+        });
+    }
 
     public static function validationRules() : array
     {
