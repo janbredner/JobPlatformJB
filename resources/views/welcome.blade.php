@@ -22,19 +22,6 @@
         </style>
     </head>
     <body>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello Vue!'
-            }
-        })
-    </script>
-    sadasd
 
-        <div id="app">
-            <welcome></welcome>
-        </div>
-        <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
