@@ -6,13 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="started with the models and controllers&#10;started with the api">
+      <change beforePath="$PROJECT_DIR$/.idea/JobPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JobPlatform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JobController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/JobJobTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/JobJobTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserCompany.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserCompany.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -142,6 +148,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jQ6ls2efprQ6C50m3cA91kKsPF" />
@@ -175,7 +182,7 @@
       <workItem from="1603784594205" duration="717000" />
       <workItem from="1604037444826" duration="34073000" />
       <workItem from="1604312632384" duration="118158000" />
-      <workItem from="1605078891275" duration="377000" />
+      <workItem from="1605078891275" duration="6114000" />
     </task>
     <task id="LOCAL-00001" summary="first concept [use-case, db, todo list]">
       <created>1603890983961</created>
@@ -254,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604910865366</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="JobController : added filter, more validation and sync">
+      <created>1605079386819</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605079386819</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +298,8 @@
     <MESSAGE value="models:&#10;-added validationRules&#10;controllers:&#10;- added validation&#10;- removed http status codes" />
     <MESSAGE value="authentication: added the sanctum authentication&#10;policies: added first policy classes" />
     <MESSAGE value="fast push" />
-    <option name="LAST_COMMIT_MESSAGE" value="fast push" />
+    <MESSAGE value="JobController : added filter, more validation and sync" />
+    <option name="LAST_COMMIT_MESSAGE" value="JobController : added filter, more validation and sync" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603783795897">
@@ -299,10 +314,11 @@
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2487" y="270" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604668019512" />
-    <state x="2009" y="89" width="1502" height="872" key="DiffContextDialog" timestamp="1603891049186">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state x="2022" y="92" width="1717" height="897" key="DiffContextDialog" timestamp="1605082335016">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2009" y="89" width="1502" height="872" key="DiffContextDialog/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1603891049186" />
+    <state x="2022" y="92" width="1717" height="897" key="DiffContextDialog/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605082335016" />
     <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1603784956182">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -335,10 +351,11 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="477" y="283" key="NewPhpFileDialog/0.0.1280.720@0.0.1280.720" timestamp="1603784888069" />
-    <state x="2349" y="248" key="Vcs.Push.Dialog.v2" timestamp="1604910869263">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state x="2410" y="255" key="Vcs.Push.Dialog.v2" timestamp="1605079390939">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604910869263" />
+    <state x="2410" y="255" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605079390939" />
     <state x="327" y="170" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1604307071437" />
     <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603869762485">
       <screen x="0" y="0" width="1280" height="720" />

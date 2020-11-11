@@ -80,6 +80,7 @@
         </ul>
     </li>
     <li>Eventuell Oberfläche</li>
+    <li>Transformieren der Daten bevor sie an die view Schicht geschickt werden</li>
 </ul>
 <!-- ---------------------------------------------------------- -->
 <h2>Probleme</h2>
