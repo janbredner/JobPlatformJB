@@ -6,12 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="started with the models and controllers&#10;started with the api">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CarRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Http/children.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,11 +163,470 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jan\TenMedia\JobPlatform\JobPlatform\tests\Http" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/cars" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/cars" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;    &quot;title&quot;: &quot;car&quot;,&#10;  &quot;first_name&quot;: &quot;First Name&quot;,&#10;  &quot;last_name&quot;: &quot;Last Name&quot;,&#10;  &quot;birthday&quot;: &quot;2020-01-01&quot;,&#10;  &quot;phones&quot;: [&#10;    {&#10;      &quot;prefix&quot;: &quot;123&quot;,&#10;      &quot;phone&quot;: &quot;123&quot;&#10;    }&#10;  ],&#10;  &quot;addresses&quot;: [&#10;    {&#10;      &quot;street&quot;: &quot;123&quot;&#10;    }&#10;  ]&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/4" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/4" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;title&quot;: &quot;Changed Last Name&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/4" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/3" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;title&quot;: &quot;Changed Last Name&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/2" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8000/api/cars/1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;title&quot;: &quot;Changed Last Name&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/cars" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;    &quot;title&quot;: &quot;car&quot;,&#10;  &quot;first_name&quot;: &quot;First Name&quot;,&#10;  &quot;last_name&quot;: &quot;Last Name&quot;,&#10;  &quot;birthday&quot;: &quot;2020-01-01&quot;,&#10;  &quot;phones&quot;: [&#10;    {&#10;      &quot;prefix&quot;: &quot;123&quot;,&#10;      &quot;phone&quot;: &quot;123&quot;&#10;    }&#10;  ],&#10;  &quot;addresses&quot;: [&#10;    {&#10;      &quot;street&quot;: &quot;123&quot;&#10;    }&#10;  ]&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/cars" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/cars" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/1.0/children" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/1.0/children" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+    <configuration name="All in children" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/Http/children.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="children#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/Http/children.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="children#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/Http/children.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="children#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/Http/children.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="children#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/Http/children.http" index="5" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.children#1" />
+        <item itemvalue="HTTP Request.children#2" />
+        <item itemvalue="HTTP Request.children#5" />
+        <item itemvalue="HTTP Request.All in children" />
+        <item itemvalue="HTTP Request.children#3" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -333,22 +797,30 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="515" y="257" key="Github.ShareDialog/0.0.1280.720@0.0.1280.720" timestamp="1603785146888" />
-    <state width="1237" height="153" key="GridCell.Tab.0.bottom" timestamp="1603783449688">
+    <state width="938" height="167" key="GridCell.Tab.0.bottom" timestamp="1605166761275">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="167" key="GridCell.Tab.0.bottom/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605166761275" />
+    <state width="618" height="227" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1605100185658" />
+    <state width="938" height="167" key="GridCell.Tab.0.center" timestamp="1605166761275">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="167" key="GridCell.Tab.0.center/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605166761275" />
+    <state width="618" height="227" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1605100185658" />
+    <state width="938" height="167" key="GridCell.Tab.0.left" timestamp="1605166761275">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="167" key="GridCell.Tab.0.left/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605166761275" />
+    <state width="618" height="227" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1605100185658" />
+    <state width="938" height="167" key="GridCell.Tab.0.right" timestamp="1605166761275">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="167" key="GridCell.Tab.0.right/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605166761275" />
+    <state width="618" height="227" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1605100185658" />
+    <state x="368" y="83" key="NewPhpClassDialog" timestamp="1605099981314">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1603783449688" />
-    <state width="1237" height="153" key="GridCell.Tab.0.center" timestamp="1603783449688">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1603783449688" />
-    <state width="1237" height="153" key="GridCell.Tab.0.left" timestamp="1603783449688">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1603783449688" />
-    <state width="1237" height="153" key="GridCell.Tab.0.right" timestamp="1603783449688">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1603783449688" />
+    <state x="368" y="83" key="NewPhpClassDialog/0.0.1280.720@0.0.1280.720" timestamp="1605099981314" />
     <state x="477" y="283" key="NewPhpFileDialog" timestamp="1603784888069">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -359,10 +831,10 @@
     <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604910869263" />
     <state x="2410" y="255" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605088931464" />
     <state x="327" y="170" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1604307071437" />
-    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603869762485">
+    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605099714759">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.720@0.0.1280.720" timestamp="1603869762485" />
+    <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.720@0.0.1280.720" timestamp="1605099714759" />
     <state x="2574" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603981024828">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
@@ -371,5 +843,10 @@
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2413" y="233" key="run.anything.popup/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604393570119" />
+    <state x="2590" y="82" width="1008" height="1017" key="search.everywhere.popup" timestamp="1605101810659">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2590" y="82" width="1008" height="1017" key="search.everywhere.popup/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605101810659" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1605099024018" />
   </component>
 </project>

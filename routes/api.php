@@ -22,11 +22,13 @@ use \App\Http\Controllers\UserController;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
-
+Route::apiResources([
+    'cars' => 'App\Http\Controllers\CarController',
+]);
 // Job routes       ////////////////////////////////////////////////////////////////////////////
 // basic routes
 Route::group(['middleware' => 'auth:sanctum'] , function(){
-    //Route::recource
+
     //route::route::ressorces
     Route::get('jobs', [JobController::class, 'index']);
     Route::put('jobs/{job}', [JobController::class, 'update']);

@@ -1,0 +1,62 @@
+GET http://localhost:8000/api/cars
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N
+
+
+###
+
+POST http://localhost:8000/api/cars
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N
+
+{
+    "title": "car",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "birthday": "2020-01-01",
+  "phones": [
+    {
+      "prefix": "123",
+      "phone": "123"
+    }
+  ],
+  "addresses": [
+    {
+      "street": "123"
+    }
+  ]
+}
+
+###
+
+GET http://localhost:8000/api/cars/4
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N
+
+###
+
+PUT http://localhost:8000/api/cars/4
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N
+
+{
+  "title": "Changed Last Name"
+}
+
+###
+
+DELETE http://localhost:8000/api/cars/4
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer 10|yOYsaADzeBxuLFnb9Df0DQdlWCNRgiy5x0kWzu8N
+
+###
