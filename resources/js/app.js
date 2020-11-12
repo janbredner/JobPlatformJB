@@ -21,6 +21,11 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+Vue.component('clicker', require('./components/ClickerComponent').default);
+
+Vue.component('probs-test', require('./components/ProbsComponent').default);
+
+Vue.component('nested-test', require('./components/NestedTestComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
