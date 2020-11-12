@@ -26,6 +26,16 @@ Vue.component('clicker', require('./components/ClickerComponent').default);
 Vue.component('probs-test', require('./components/ProbsComponent').default);
 
 Vue.component('nested-test', require('./components/NestedTestComponent').default);
+
+Vue.component('input-test', require('./components/InputTestComponent').default);
+
+Vue.component('menue' , require('./components/MenueComponent').default);
+
+Vue.component('headerc', require('./components/HeaderComponent').default);
+
+Vue.component('footerc', require('./components/FooterComponent').default);
+
+Vue.component('contentc', require('./components/ContendComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
