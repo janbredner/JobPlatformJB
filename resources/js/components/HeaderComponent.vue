@@ -1,9 +1,8 @@
 <template>
-    <header class="bg-green-800">
+    <header class="w-full bg-green-800">
         <div class="uppercase tracking-wide text-3xl text-green-100 font-bold py-4 px-6">
             {{title}}
         </div>
-        <menue></menue>
     </header>
 </template>
 
@@ -17,7 +16,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-
-</style>

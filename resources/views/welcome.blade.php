@@ -22,6 +22,7 @@
 
         <div id="app" class="bg-green-100">
             <headerc></headerc>
+            <menue></menue>
             <contentc></contentc>
             <footerc></footerc>
         </div>

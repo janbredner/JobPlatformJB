@@ -7,16 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="da514fda-1715-4461-b4a0-0d5579fab665" name="Default Changelist" comment="started with the models and controllers&#10;started with the api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/FooterComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FooterComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/HeaderComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/MenueComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MenueComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -754,7 +749,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605195887074</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="included tailwindcss&#10;first steps with tailwindcss">
+      <created>1605259920190</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605259920190</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -773,6 +775,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="first concept [use-case, db, todo list]" />
     <MESSAGE value="completed migrations, may need to add some small things later&#10;completed seeders&#10;updated the README.md" />
     <MESSAGE value="started with the models and controllers&#10;started with the api" />
@@ -789,7 +793,8 @@
     <MESSAGE value="first Vue steps" />
     <MESSAGE value="more Vue Tests" />
     <MESSAGE value="added Components to get a basic layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Components to get a basic layout" />
+    <MESSAGE value="included tailwindcss&#10;first steps with tailwindcss" />
+    <option name="LAST_COMMIT_MESSAGE" value="included tailwindcss&#10;first steps with tailwindcss" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603783795897">
@@ -849,11 +854,11 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="477" y="283" key="NewPhpFileDialog/0.0.1280.720@0.0.1280.720" timestamp="1603784888069" />
-    <state x="2410" y="255" key="Vcs.Push.Dialog.v2" timestamp="1605186905260">
+    <state x="2410" y="255" key="Vcs.Push.Dialog.v2" timestamp="1605259925420">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2349" y="248" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1680.1050@1920.0.1680.1050" timestamp="1604910869263" />
-    <state x="2410" y="255" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605186905260" />
+    <state x="2410" y="255" key="Vcs.Push.Dialog.v2/0.0.1280.720/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605259925420" />
     <state x="327" y="170" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1604307071437" />
     <state x="13" y="83" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605099714759">
       <screen x="0" y="0" width="1280" height="720" />
