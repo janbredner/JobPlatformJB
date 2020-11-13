@@ -12,11 +12,4 @@ export default {
 
 <style scoped>
 
-footer {
-    position: bottom;
-    padding: 2.6em;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 </style>

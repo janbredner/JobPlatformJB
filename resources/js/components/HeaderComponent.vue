@@ -1,6 +1,8 @@
 <template>
-    <header>
-        <h3>{{title}}</h3>
+    <header class="bg-green-800">
+        <div class="uppercase tracking-wide text-3xl text-green-100 font-bold py-4 px-6">
+            {{title}}
+        </div>
         <menue></menue>
     </header>
 </template>
