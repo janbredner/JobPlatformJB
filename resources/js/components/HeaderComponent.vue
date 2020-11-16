@@ -13,6 +13,6 @@ export default {
         return {
             title: 'A Nice Job Portal'
         }
-    }
+    },
 }
 </script>

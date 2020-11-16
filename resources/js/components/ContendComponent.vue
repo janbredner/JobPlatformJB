@@ -1,35 +1,24 @@
 <template>
     <div>
-        <h1>Vue.js Tests</h1>
+        <div class="text-blue-500">
+            {{selectedContend}}
+        </div>
 
-        <h2>Input Test</h2>
-        <h3>Simple input and save Test (save a car)</h3>
-        <input-test></input-test>
-        <h2>Component Tests</h2>
-        <h3>Nested Test</h3>
-        <nested-test></nested-test>
+        <home v-if= "this.selectedContend == 'home'"></home>
+        <tests v-if="this.selectedContend == 'tests'"></tests>
+        <car-all-cars v-if="this.selectedContend == 'all-cars'"></car-all-cars>
 
-        <h3>Probs Test</h3>
-        <probs-test content-test="probsTestItem Nr1"></probs-test>
-        <probs-test content-test="probsTestItem Nr2"></probs-test>
-        <probs-test content-test="probsTestItem Nr3"></probs-test>
-
-        <h3>clickerComponent</h3>
-        <clicker></clicker>
-        <clicker></clicker>
-        <clicker></clicker>
-        <h2>API Tests</h2>
-        <h3>load Data from api</h3>
-        <example-component></example-component>
     </div>
 </template>
 
 <script>
 export default {
-    name: "ContendComponent"
+    name: "ContendComponent",
+    props: {
+        selectedContend: {
+            type:String,
+            default: "ups"
+        },
+    }
 }
 </script>
-
-<style scoped>
-
-</style>

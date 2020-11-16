@@ -38,6 +38,18 @@ Vue.component('footerc', require('./components/FooterComponent').default);
 Vue.component('contentc', require('./components/ContendComponent').default);
 
 Vue.component('menue-car', require('./components/MenueCarComponent').default);
+
+Vue.component('car-all-cars', require('./components/CarAllCars').default);
+
+Vue.component('master', require('./components/MasterComponent').default);
+
+Vue.component('home', require('./components/HomeComponent').default);
+
+Vue.component('menue-home', require('./components/MenueHomeComponent').default);
+
+Vue.component('menue-test', require('./components/MenueTestsComponent').default);
+
+Vue.component('tests', require('./components/TestsComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

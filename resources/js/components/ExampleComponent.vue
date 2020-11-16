@@ -15,6 +15,7 @@
         </div>
     </div>
 </template>
+
 <script>
     export default {
         data: function(){
@@ -37,10 +38,7 @@
                 this.waitForMe = axios.get('api/cars')
                 .then((response) => {
                     this.cars = response.data;
-                    //this.cars = JSON.parse(JSON.stringify(response.data));
-                    //console.log(response.data, 'response.data');
                     console.log(this.cars, 'this.cars');
-                    //console.log('------------------------------------------', JSON.parse(JSON.stringify(response.data)));
                     }
                 )
                 .catch(error => {
