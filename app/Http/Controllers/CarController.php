@@ -5,34 +5,50 @@ namespace App\Http\Controllers;
 use App\Http\Resources\CarResource;
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class CarController extends Controller
 {
     public function __construct()
     {
         //TODO: zum testen der view herausgenommen
-        //$this->authorizeResource(Car::class);
+        $this->authorizeResource(Car::class);
     }
 
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //return response(Car::paginate());
         //TODO: zum testen der view herausgenommen
+        return $this->filter($request);
         return response(Car::all());
         return response(CarResource::collection(Car::all()));
 
+    }
+
+    private function filter(Request $request){
+
+        $filter = $request->validate([
+            'random'        => 'int',
+        ]);
+
+        if (array_key_exists('random', $filter)) {
+            return response(Car::all()->random($filter['random']));
+        }
+
+        return response(Car::all());
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -50,7 +66,7 @@ class CarController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Car  $car
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show(Car $car)
     {
@@ -62,7 +78,7 @@ class CarController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Car  $car
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, Car $car)
     {
@@ -80,7 +96,7 @@ class CarController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Car  $car
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Car $car)
     {
